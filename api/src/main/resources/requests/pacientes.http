@@ -1,0 +1,46 @@
+### GET Recuperando todos os pacientes.
+GET http://localhost:8080/pacientes
+
+### GET Recuperando 1 paciente por página e somente a página 2.
+GET http://localhost:8080/pacientes?size=1&page=2
+
+### GET Recuperando todos os médicos ordenados por crm.
+GET http://localhost:8080/pacientes?sort=id
+
+### GET Executa um request de test.
+GET http://localhost:8080/hello
+
+### POST Inserindo um novo paciente
+POST http://localhost:8080/pacientes
+Content-Type: application/json
+
+{
+  "nome": "Carlos",
+  "email": "carlos@email.com",
+  "telefone": "1939949993",
+  "cpf" : "13312817332",
+  "endereco": {
+    "logradouro": "rua 1",
+    "bairro": "bairro",
+    "cep": "12345678",
+    "cidade": "Cidade",
+    "uf": "BR",
+    "numero": "1",
+    "complemento": "complemento"
+  }
+}
+
+### PUT Atualizando informações de um paciente
+PUT http://localhost:8080/pacientes
+Content-Type: application/json
+
+{
+  "id": 3,
+  "telefone": "1992584131"
+
+}
+
+### DELETE Excluindo um registro em paciente.
+DELETE http://localhost:8080/pacientes/1
+
+###
